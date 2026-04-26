@@ -23,5 +23,5 @@ jobs:
     - name: Build application and run it
       run: |
         . $IDF_PATH/export.sh
-        idf.py set-target esp32s3
+        idf.py set-target esp32c3
         idf.py qemu --qemu-extra-args --no-reboot
