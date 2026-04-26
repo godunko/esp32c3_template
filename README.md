@@ -1,8 +1,8 @@
-# ESP32-S3 Ada Project Template (ESP-IDF Integrated)
+# ESP32-C3 Ada Project Template (ESP-IDF Integrated)
 
-[![Build](https://github.com/godunko/esp32s3_template/actions/workflows/main.yaml/badge.svg)](https://github.com/godunko/esp32s3_template/actions/workflows/main.yaml)
+[![Build](https://github.com/godunko/esp32c3_template/actions/workflows/main.yaml/badge.svg)](https://github.com/godunko/esp32c3_template/actions/workflows/main.yaml)
 
-This repository provides a template for integrating Ada source code into the ESP-IDF (C-based) build system.
+This repository provides a template for integrating Ada source code into the ESP-IDF build system.
 It allows you to leverage the robust drivers and RTOS capabilities of the ESP-IDF while writing your application logic in Ada.
 
 ## Project Architecture
@@ -14,7 +14,7 @@ Instead of a standalone Ada executable, this project compiles Ada source into a 
 
 ## Prerequisites
 
- * ESP-IDF SDK: Version 5.x is recommended. Ensure `idf.py` is in your PATH.
+ * ESP-IDF SDK: Version 6.x is recommended. Ensure `idf.py` is in your PATH.
  * Alire (Ada Libre Resources): The Ada package manager.
 
 ## Build Instructions
@@ -35,8 +35,8 @@ Source the ESP-IDF tools:
 2. Clone and Build tools
 
 ```bash
-git clone --recurse-submodules https://github.com/godunko/esp32s3_template.git my_esp32s3_project
-cd my_esp32s3_project
+git clone --recurse-submodules https://github.com/godunko/esp32c3_template.git my_esp32c3_project
+cd my_esp32c3_project
 alr -C crates/a0b-tools/ build
 alr -C crates/xtensa-dynconfig/ build
 ```
@@ -46,7 +46,7 @@ The following command compiles both the Ada and C sources, links the binary, fla
 
 ```bash
 # Configure the target (first time only)
-idf.py set-target esp32s3
+idf.py set-target esp32c3
 
 # Build the full project (compiles and links Ada library + ESP-IDF components)
 idf.py build
