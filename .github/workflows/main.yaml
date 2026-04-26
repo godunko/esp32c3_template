@@ -12,10 +12,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         submodules: recursive
-    - name: Build Xtensa Dynconfig
-      run: |
-        alr -C crates/xtensa-dynconfig --non-interactive with --solve
-        alr -C crates/xtensa-dynconfig build
     - name: Build A0B Tools
       run: |
         alr -C crates/a0b-tools --non-interactive with --solve
