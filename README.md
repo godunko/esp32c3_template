@@ -38,7 +38,6 @@ Source the ESP-IDF tools:
 git clone --recurse-submodules https://github.com/godunko/esp32c3_template.git my_esp32c3_project
 cd my_esp32c3_project
 alr -C crates/a0b-tools/ build
-alr -C crates/xtensa-dynconfig/ build
 ```
 3. Build, Flash, and Monitor via ESP-IDF
 
